@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 30vmin;
+  pointer-events: none;
+  padding: 1em;
+}
+.App-logo-welcome {
+  max-height: 10vh;
+  pointer-events: none;
+  padding: 1em;
+}
+
+.react-thumbnail {
+  height: 10vh;
+  padding-top: 2em;
+  padding-bottom: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo, .react-thumbnail, .App-logo-welcome {
+    animation: App-logo-spin infinite 15s ease-in-out;
+  }
+}
+
+.App-header {
+  background-color: #264685;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.react-thumbnail{
+  animation: App-logo-spin;
+  animation-duration: 5s; 
+  animation-timing-function: ease-in;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  then {
+    transform: scale(1.5);
+  }
+}
