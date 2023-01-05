@@ -10,6 +10,7 @@ import UseSetState from "./Components/useState";
 import Footer from "./Components/Footer";
 import { useContext } from "react";
 import { Navbar } from "react-bootstrap";
+// import Navbar from "./Components/Navbar"
 
 const StyledButton = styled.button`
   display: inline-block;
@@ -44,6 +45,8 @@ function App() {
             </Routes>
           </Router>
         </Navbar>
+        <br/>
+
       </div>
       <header className="App-header">
         <p>Why is this one dark?</p>

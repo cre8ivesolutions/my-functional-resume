@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## To run a migration
+- npx sequelize-cli db:migrate
+- UNDO a migration: npx sequelize-cli db:migrate:undo
+
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -69,3 +73,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+1. Add the tables to your database. From the server folder, run:
+
+         npx sequelize-cli db:migrate
+        
+        *If there are errors, to undo migration run:
+        
+         npx sequelize-cli db:migrate:undo:all 
+
+2. To add the seed data, run: 
+
+    npx sequelize-cli db:seed:all

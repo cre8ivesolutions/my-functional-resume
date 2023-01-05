@@ -2,8 +2,6 @@ import React from "react";
 import logo from "../logo.svg"
 import "../App.css";
 
-
-
 const Welcome = () => {
     return (
             <div className="position-absolute top-50 start-50 translate-middle w-75 h-75">
