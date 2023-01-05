@@ -4,6 +4,8 @@ const sequelize = new Sequelize(process.env.PG_URI)
 
 const db = {};
 
+//This file is not being used to get data from pg to the browser
+
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
@@ -15,4 +17,4 @@ db.User = require("./user")
 //   .then(() => console.log`2. Database connected with PG_URI at Models/index.js...`)
 //   .catch((err) => console.log("Error" + err));
 
-module.exports = connection;
+module.exports = db;

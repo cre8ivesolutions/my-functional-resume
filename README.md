@@ -84,3 +84,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 2. To add the seed data, run: 
 
     npx sequelize-cli db:seed:all
+
+
+    #### Notes for self: 
+    the app is using the config.js file via "pool" in ./db to get the data to the browser. 
+    The config.js file needs to have only ' and NOT "
+    Migrations and seeders are using the 

@@ -15,6 +15,7 @@ module.exports = (sequelize, Sequelize) => {
     // }
   }
   User.init({
+    user_id: Sequelize.INTEGER,
     name: Sequelize.STRING,
     email: Sequelize.STRING,
     password: Sequelize.STRING
