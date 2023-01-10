@@ -1,81 +1,50 @@
-import logo from "./logo.svg";
-import "./index.css"
-// import "./App.css";
-import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
-import Home from "./Components/Home";
-import styled from "styled-components";
-// import ThisContext from "./Components/Context";
 import React from "react";
-import Contact from "./Components/Contact";
-import UseSetState from "./Components/useState";
-import Footer from "./Components/Footer";
-import { useContext } from "react";
-import { Navbar } from "react-bootstrap";
-// import Navbar from "./Components/Navbar"
+// import logo from "./logo.svg";
+import "./index.css";
+import "./App.css";
 
-const StyledButton = styled.button`
-  display: inline-block;
-  border-radius: 0.75em;
-  padding: 0.5rem 0;
-  margin: 0.5rem 1rem;
-  width: 9rem;
-  background: white;
-  color: black;
-  font-weight: bold;
-  border: none;
-`;
+import Footer from "./Components/Footer";
+import Navbar from "./Components/Navbar";
+import { useContext } from "react";
+
+// import UseSetState from "./Components/UseState";
+// import ThisContext from "./Components/Context";
+
 const ThisContext = React.createContext("The default Context Value is this!");
 
 function App() {
   const ContextInfo = useContext(ThisContext);
   return (
     <div className="App">
-      <div>
-        <Navbar bg="dark" variant="dark">
-          <Router>
-            <StyledButton>
-              <Link to="/home">HOME</Link>
-            </StyledButton>
-            <StyledButton>
-              <Link to="/contact">CONTACT</Link>
-            </StyledButton>
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route exact path="/home" element={<Home />} />
-              <Route exact path="/contact" element={<Contact />} />
-            </Routes>
-          </Router>
-        </Navbar>
-        <br/>
+      <Navbar />
 
-      </div>
-      <header className="App-header">
-        <p>Why is this one dark?</p>
-        <Home />
-        <p>This one is dark because it is located in the header of the main App.jsx file.</p>
-      </header>
-      <br />
-      <div>
+      {/* <div className="Context">
         <ThisContext.Provider value="default 3" />
         <UseSetState />
         <h3>{ContextInfo}</h3>
-      </div>
+      </div> */}
 
-      <br />
-      <img src={logo} className="App-logo" alt="logo" 
-        max-height="7vh"
-      />
+      {/* <br />
+
       <div>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </div>
-      <div>
+        <span>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={logo} className="App-logo " alt="logo" max-height="4vh" />
+
+            <p>App created using React</p>
+          </a>
+        </span>
+        <br />
+        <br />
+        <hr />
+      </div> */}
+
+      <div className="footer">
         <Footer />
       </div>
     </div>

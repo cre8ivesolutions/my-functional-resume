@@ -1,23 +1,19 @@
-import Fade from 'react-bootstrap/Fade'
-import React from 'react';
-import githubicon from '../../public/github-mark.png'
+import React from "react";
+import githubicon from "../assets/github-mark-white.png";
 
-import ContactForm from "./ContactForm"
+import ContactForm from "./ContactForm";
 
-export default function Contact () {
-    return(
-        <div className='Contact'>
-            <h2>Graduated December 2022</h2>
-            <Fade mountOnEnter>
-                <h3>Contact me for more details</h3>
-                <ContactForm />
-            </Fade>
-            <h3>Check out the projects I have completed here</h3>
-            <a href='https://github.com/cre8ivesolutions'><p>Check out my Github</p>
-            <img src='githubicon'></img>
-            </a>
-            <br/>
-        </div>
-    )
-
+export default function Contact() {
+  return (
+    <div className="Contact">
+      <h2>December 2022 Grad!</h2>
+      <ContactForm />
+      
+      <a href="https://github.com/cre8ivesolutions">
+        <h4>Check out my Github</h4>
+        <img className="icon" src={githubicon} alt="github icon" />
+      </a>
+      
+    </div>
+  );
 }
