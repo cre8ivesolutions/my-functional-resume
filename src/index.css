@@ -13,6 +13,9 @@ a {
   color: rgb(43, 111, 230);
 }
 
+textarea {
+  resize: none;
+}
 .ContactForm {
   background-color:rgb(49, 49, 49);
   display: inline-block;
@@ -50,7 +53,7 @@ a {
   border: none;
 }
 
-.UseState{
+.UseState {
   max-width: 80vw;
   /* margin: 0 -1em -1em -1em; */
   margin: 1em;
@@ -58,6 +61,7 @@ a {
   background-color: rgb(31, 31, 31);
   display: inline-block;
 }
+
 h1, h2 {
   color: rgb(43, 111, 230);
 }
