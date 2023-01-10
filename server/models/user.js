@@ -15,10 +15,26 @@ module.exports = (sequelize, Sequelize) => {
     // }
   }
   User.init({
-    user_id: Sequelize.INTEGER,
+    user_id:{
+      allowNull: true,     
+      type: Sequelize.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    }, 
     name: Sequelize.STRING,
     email: Sequelize.STRING,
-    password: Sequelize.STRING
+    message: Sequelize.STRING,
+    password: Sequelize.STRING, 
+    created_at: {
+      type: Sequelize.TIMESTAMP,
+      allowNull: true,
+      DEFAULT: new Date()
+    },
+    updated_at: {
+      type: Sequelize.TIMESTAMP,
+      allowNull: true,
+      DEFAULT: new Date()
+    }
   }, {
     sequelize,
     modelName: 'User',

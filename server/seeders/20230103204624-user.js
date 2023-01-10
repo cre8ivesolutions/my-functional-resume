@@ -24,6 +24,24 @@ module.exports = {
           email: "tammy@email.com",
           password: "password",
         },
+        {
+          user_id: 4,
+          name: "Kailee",
+          email: "Kailee@email.com",
+          password: "password",
+        },
+        {
+          user_id: 5,
+          name: "Steve",
+          email: "steve@email.com",
+          password: "password",
+        },
+        {
+          user_id: 6,
+          name: "Wyatt",
+          email: "wyatt@email.com",
+          password: "password",
+        },
       ],
       {}
     );

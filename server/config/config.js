@@ -2,6 +2,7 @@ require('dotenv').config();
 
 //this is currently not being used.
 // if i need to use it, uncomment the username and pw in the .env file
+
 console.log(`config.js is workin'`);
 
 module.exports = {

@@ -11,50 +11,46 @@ const cors = require("cors"); //provides middleware for express to enable CORS w
 // const router = require('express').Router();
 // const userRouter = require("./controllers/userController");
 
-// const PORT = 5001;
-
-// var corsOptions={
-//     origin:"http://localhost:5000" //this is the BE Server. may need to change
-// }
-
-// app.use(cors(corsOptions)); // use if there are cors errors
-
 app.use(cors());
 app.use(express.json());
-// app.use(express.urlencoded({extended:true}));
-
-// Syncing the database
-// pool.sequelize
-//   .sync({ alter: true })
-//   .then(() => {
-//     console.log("3. Resume database is synced from server.js");
-//   })
-//   .catch((err) => {
-//     console.log("Databse is not synced: " + err.message);
-//   });
 
 // Test route to see if the route is working
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to Tammys Resume" });
 });
 
-// Create user //this is working back and forth
+// Create a user //this is working
 app.post("/users", async (req, res) => {
   try {
-    const { password } = req.body;
+    const { name, email, password } = req.body;
     const newUser = await pool.query(
-      "INSERT INTO users (password) VALUES($1) RETURNING *",
-      [password]
+      "INSERT INTO users (name, email, password) VALUES($1, $2, $3)",
+      [name, email, password]
     );
 
     res.json(newUser.rows[0]);
   } catch (err) {
-    console.error(err.message + "error in pern code");
+    console.error(err.message + " error in pern code");
+  }
+});
+
+// Contact me //This is working
+app.post("/contact", async (req, res) => {
+  try {
+    const { name, email, message } = req.body;
+    const newMessage = await pool.query(
+      "INSERT INTO users (name, email, message) VALUES($1, $2, $3)",
+      [name, email, message]
+    );
+    res.json(`Message submitted ${JSON.stringify(newMessage)}`);
+
+  } catch (err) {
+    console.error(err.message + " error submitting message");
   }
 });
 
 
-//Get all users // This is working it will console.log key/value as objects
+//Get all users // This is working; console.log = key/value as objects
 app.get("/users", async (req, res) => {
   try {
 
@@ -69,7 +65,6 @@ app.get("/users", async (req, res) => {
   }
 });
 
-// app.use("/api/users", userRouter);
 
 // Get one user by id //this is working 
 app.get("/user/:id", async (req, res) => {
@@ -78,7 +73,7 @@ app.get("/user/:id", async (req, res) => {
     const user = await pool.query("SELECT * FROM users WHERE user_id = $1", [
       id
     ]);
-
+    
     res.json(user.rows[0]);
     console.log(`user.rows[0] = ${user.rows[0]}`)
   } catch (err) {
@@ -86,11 +81,23 @@ app.get("/user/:id", async (req, res) => {
   }
 });
 
+// Delete a user // this is working
+app.delete("/user/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deleteUser = await pool.query("DELETE FROM users WHERE user_id = $1", [
+      id
+    ]);
+    res.json("User was deleted!");
+  } catch (err) {
+    console.log(err.message);
+  }
+});
+
 //update a users email address // this is not working
 app.put("/user/:id", async (req, res) => {
   try {
-
-    //this query works UPDATE users SET email = 'pgemail@email.com' WHERE user_id = 1 RETURNING *;
+  //this pgAdmin query works UPDATE users SET email = 'pgemail@email.com' WHERE user_id = 1 RETURNING *;
     const { user_id } = req.params;
     const { newEmail } = req.body;
     const updateEmail = await pool.query(
@@ -102,11 +109,12 @@ app.put("/user/:id", async (req, res) => {
       console.log(`new email for user id = ${updateEmail}`)
     } catch (err) {
       console.error(err.message);
-  }
-});
-
-
-
-app.listen(5001, () => {
-  console.log(`1. Server is workin' on 5001`);
-});
+    }
+  });
+  
+    // app.use("/api/users", userRouter);
+  
+  app.listen(5001, () => {
+    console.log(`1. Server is workin' on 5001`);
+  });
+  
