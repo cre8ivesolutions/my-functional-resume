@@ -9,14 +9,16 @@ export default function UseSetState() {
     <div>
       <div className="UseState">
         <h1> This is the useState section! </h1>
-        <h2>
-          The current state is:</h2>
-          <h3> <i>'{state}'</i> </h3>
+        <p className="description">React uses features that they call Hook's. 'useState' is a Hook that lets you update the state of the app without having to use a class. </p>
+        <h2>Check it out!</h2>
+        <h3 className="left">Example:</h3>
+        <h3>The current state is:</h3>
+          <h4> <i>'{state}'</i> </h4>
         
-        <h2>
+        <h3>
           {" "}
           Use the variable <b>'setState'</b> to update the 'state'.
-        </h2>
+        </h3>
         <span>
           <label type="text">
             Try it yourself! Enter the new <i>setState</i> here:{" "}

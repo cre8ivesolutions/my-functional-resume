@@ -10,7 +10,6 @@ export default function Contact() {
       <ContactForm />
       
       <a href="https://github.com/cre8ivesolutions">
-        <h4>Check out my Github</h4>
         <img className="icon" src={githubicon} alt="github icon" />
       </a>
       

@@ -5,19 +5,20 @@ import "../App.css";
 export default function Welcome (){
     return (
             <div className="Welcome">
-                <h2>Welcome</h2>
-                <span>
+                <br/>
+                <h2>✌️ Welcome ✌️ </h2>
+                    <h3>to Tammys React Playground</h3>
+                {/* <span> */}
+                    {/* <img src={logo} className="App-logo-welcome"
+                        alt="react-logo"/>  */}
+                    {/* <img src={logo} className="App-logo-welcome-2"
+                        alt="react-logo"/>  */}
                     <img src={logo} className="App-logo-welcome"
                         alt="react-logo"/> 
-                    <img src={logo} className="App-logo-welcome"
-                        alt="react-logo"/> 
-                    <img src={logo} className="App-logo-welcome"
-                        alt="react-logo"/> 
-                </span>
-                <h2>to Tammys React Playground</h2>
-                <img src="./smiley-pic.png" className="App-logo-welcome" 
+                {/* </span> */}
+                {/* <img src="./smiley-pic.png" className="App-logo-welcome-2" 
                 alt="smiley face" 
-                />
+                /> */}
             </div>
     )
 };

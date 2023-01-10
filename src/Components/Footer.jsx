@@ -10,19 +10,19 @@ export default function Footer() {
         <span>
           <a href="https://github.com/cre8ivesolutions">
             <p>Check out my Github</p>
-            <img className="icon" src={githubicon} alt="github icon" />
+            <img className="icon App-logo-welcome" src={githubicon} alt="github icon" />
           </a>
         </span>
       </div>
 
       {/* <div>
-<br/>
+<b><p>✌️</p></b>
       </div> */}
       
       <div className="icon-text">
         <a href="https://reactjs.org">
           <p>App created using React</p>
-          <img src={logo} className="icon " alt="logo" max-height="4vh" />
+          <img src={logo} className="icon App-logo-welcome" alt="logo" max-height="4vh" />
         </a>
       </div>
       

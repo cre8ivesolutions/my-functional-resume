@@ -16,7 +16,7 @@ a {
 .ContactForm {
   background-color:rgb(49, 49, 49);
   display: inline-block;
-  border-radius: 12px;
+  border-radius: 1em;
   padding: 1em;
   margin: .5em;
   max-width: 80vw;
@@ -43,7 +43,7 @@ a {
   color: rgb(202, 202, 202);
   padding: .5em 1em .5em 1em;
   margin: 2em 1em 0 1em;
-  border-radius: .5em;
+  border-radius: 1em;
   max-height: 8vh;
   cursor: pointer;
   background-color: rgb(71,71,71);
@@ -52,11 +52,18 @@ a {
 
 .UseState{
   max-width: 80vw;
-  margin: 0 -1em -1em -1em;
+  /* margin: 0 -1em -1em -1em; */
+  margin: 1em;
+  padding: 1em;
   background-color: rgb(31, 31, 31);
   display: inline-block;
 }
-
+h1, h2 {
+  color: rgb(43, 111, 230);
+}
+/* h3 {
+  color: rgb(164, 193, 245);
+} */
 .Welcome {
   background-color: rgb(31, 31, 31);
   margin: 0 -1em -1em -1em;

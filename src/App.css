@@ -16,11 +16,6 @@ a {
   justify-content: space-between;
   font-size: x-small;
   max-height: 10vh;
-  /* background-color: black; */
-  
-  /* padding: .5em; */
-  /* margin-bottom: 0; */
-  /* padding-bottom: 1px; */
 }
 .icon {
   max-height: 4vh;
@@ -36,10 +31,17 @@ a {
   display: inline-block;
 }
 .App-logo-welcome {
-  max-height: 10vh;
+  max-height: 4vh;
   pointer-events: none;
   padding: 1em;
-  animation: react-icons-scale 5s steps(10,end) 0s infinite alternate both;
+  /* animation: react-icons-scale 5s steps(10,end) 0s infinite alternate both; */
+}
+.App-logo-welcome-2 {
+  max-height: 20vh;
+  pointer-events: none;
+  padding: 1em;
+  animation: react-icons-scale 5s steps(10,end) 0s 2 alternate both;
+  animation-delay: 3s;
 }
 
 .react-thumbnail {
@@ -53,17 +55,21 @@ a {
     animation: App-logo-spin infinite 15s ease-in-out;
   }
 }
-
-/* .App-header {
-  background-color: #b91818;
+.description {
+  justify-content: left;
+  font-size: smaller;
+  display: block;
+  padding: 2em;
+}
+.left {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #d1d1d1;
-} */
-
+  /* justify-self: start; */
+  justify-content: flex-start;
+  padding-left: 2em;
+  background-color: #d1d1d1;
+  border-radius: 8px;
+    /* justify-content: left; */
+}
 .App-link {
   color: #d1d1d1;
 }
@@ -98,11 +104,11 @@ textarea {
   animation-duration: 5s; 
   animation-timing-function: ease-in;
   animation-delay: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 2;
 }
-.submit-btn {
-  border-radius: 1.5em;
-}
+/* .submit-btn {
+  border-radius: 12px;
+} */
 
 @keyframes App-logo-spin {
   from {
