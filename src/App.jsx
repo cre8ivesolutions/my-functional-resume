@@ -6,6 +6,7 @@ import "./App.css";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import { useContext } from "react";
+import Contact from "./Components/Contact";
 
 // import UseSetState from "./Components/UseState";
 // import ThisContext from "./Components/Context";
@@ -16,35 +17,18 @@ function App() {
   const ContextInfo = useContext(ThisContext);
   return (
     <div className="App">
+      <div className="navbar">
       <Navbar />
-
+      </div>
+      <Contact />
+     
       {/* <div className="Context">
         <ThisContext.Provider value="default 3" />
         <UseSetState />
         <h3>{ContextInfo}</h3>
       </div> */}
 
-      {/* <br />
-
-      <div>
-        <span>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={logo} className="App-logo " alt="logo" max-height="4vh" />
-
-            <p>App created using React</p>
-          </a>
-        </span>
-        <br />
-        <br />
-        <hr />
-      </div> */}
-
-      <div className="footer">
+      <div className="Footer">
         <Footer />
       </div>
     </div>

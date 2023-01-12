@@ -10,13 +10,13 @@ export default function Navbar() {
       <Router>
         <p></p>
         <Link className="nav" to="/home">
-          ✨ Home{ " "}
+          Home{ " "}
         </Link>
         <Link className="nav" to="/contact">
           Contact{" "}
         </Link>
         <Link className="nav" to="/UseState">
-          useState ✨ {" "}
+          useState {" "}
         </Link>
         <p></p>
         <Routes>

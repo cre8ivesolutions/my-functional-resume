@@ -9,33 +9,43 @@ export default function UseSetState() {
     <div>
       <div className="UseState">
         <h1> This is the useState section! </h1>
-        <p className="description">React uses features that they call Hook's. 'useState' is a Hook that lets you update the state of the app without having to use a class. </p>
+        <p className="description">
+          React uses features that they call Hook's. 'useState' is a Hook that
+          lets you update the state of the app without having to use a class.{" "}
+        </p>
+        <p>Step 1: import {"{ useState }" } from 'react'</p>
+        <p>Step 2: const [state, setState]= useState('This is the starting 'useState')</p>
+        <p>Step 3: Use the variable 'setState' to update the current state.</p>
+
         <h2>Check it out!</h2>
-        <h3 className="left">Example:</h3>
-        <h3>The current state is:</h3>
-          <h4> <i>'{state}'</i> </h4>
         
-        <h3>
-          {" "}
-          Use the variable <b>'setState'</b> to update the 'state'.
-        </h3>
-        <span>
-          <label type="text">
-            Try it yourself! Enter the new <i>setState</i> here:{" "}
-          </label>
-          <br/>
-          <br/>
-          <input
-            type="text"
-            onChange={(e) => {
-              setState(e.target.value);
-            }}
+        <div className="example">
+          <h3 className="left">Example:</h3>
+          <span><p>The current state is: 
+            <i> '{state}'</i>{" "}
+          </p></span>
+
+          <p>
+            {" "}
+            Use the variable <b>'setState'</b> to update the 'state'.
+          </p>
+          <span>
+            <label id="setState" type="text">
+              Try it yourself! Enter the new <i>setState</i> here:
+            </label>
+            <br/>
+            <br/>
+            <input
+              type="text"
+              name="setState"
+              onChange={(e) => {
+                setState(e.target.value);
+              }}
             />
-        </span>
-            <br/>
-            <br/>
+          </span>
+        </div>
       </div>
-            <br/>
+      <br />
     </div>
   );
 }

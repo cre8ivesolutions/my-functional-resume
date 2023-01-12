@@ -1,5 +1,5 @@
 body {
-  margin: -.25em;
+  margin: -.25em 0 .25em 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -10,9 +10,8 @@ body {
   font-weight: 500;
 }
 a {
-  color: rgb(43, 111, 230);
+  color: rgb(146, 186, 255);
 }
-
 textarea {
   resize: none;
 }
@@ -21,9 +20,10 @@ textarea {
   display: inline-block;
   border-radius: 1em;
   padding: 1em;
-  margin: .5em;
+  margin: 1em;
   max-width: 80vw;
   text-align: center;
+  font-size: small;
 }
 .ContactForm label {
   text-align: left;
@@ -38,7 +38,7 @@ textarea {
   margin: .5em;
   background-color: rgb(71, 71, 71);
   border: none;
-  border-radius: 16px;
+  border-radius: 1em;
   color: rgb(202, 202, 202);
 }
 
@@ -52,24 +52,32 @@ textarea {
   background-color: rgb(71,71,71);
   border: none;
 }
-
-.UseState {
-  max-width: 80vw;
-  /* margin: 0 -1em -1em -1em; */
-  margin: 1em;
-  padding: 1em;
-  background-color: rgb(31, 31, 31);
-  display: inline-block;
+.example {
+  background-color: rgba(71, 71, 71, 0.571);
+  padding: 0em 1em 1em 1em;
+  margin: 0 1em 1em 1em;
+  border-radius: 1em;
+  border: 4px dotted rgba(71, 71, 71);
 }
 
 h1, h2 {
   color: rgb(43, 111, 230);
 }
-/* h3 {
-  color: rgb(164, 193, 245);
-} */
-.Welcome {
+.UseState input {
+  max-width: 40vw;
+}
+
+.Welcome, .Contact , .UseState {
+  box-sizing: content-box;
+  width: 110%;
+  min-height: 80vh;
   background-color: rgb(31, 31, 31);
-  margin: 0 -1em -1em -1em;
-  /* padding: 1px; */
+  padding: 8px 8px 8px 8px;
+  margin: 0 -2em 0em -2em; 
+  background-image: url("https://images.unsplash.com/photo-1532278951723-545f655c97f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }

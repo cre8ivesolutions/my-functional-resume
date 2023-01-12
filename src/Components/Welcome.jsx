@@ -6,7 +6,7 @@ export default function Welcome (){
     return (
             <div className="Welcome">
                 <br/>
-                <h2>✌️ Welcome ✌️ </h2>
+                <h2> Welcome ✌️ </h2>
                     <h3>to Tammys React Playground</h3>
                 {/* <span> */}
                     {/* <img src={logo} className="App-logo-welcome"
